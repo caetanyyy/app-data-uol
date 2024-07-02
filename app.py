@@ -26,8 +26,10 @@ def generate_location_map(db, width, height):
         feature['id'] = feature['properties']['name']
         state_id_map[feature['properties']['sigla']] = feature['id']
     
-    db_count = db[['Estado','Longitude','Latitude']].value_counts().reset_index()
-    
+    db_count = db[['Estado']].value_counts().reset_index()
+    db_unique = db[['Estado','Longitude','Latitude']].drop_duplicates().reset_index()
+    db_count = db_count.merge(db_unique, on = 'Estado', how = 'left')
+
     fig = px.choropleth_mapbox(
         db_count,
         locations = 'Estado', #define the limits on the map/geography
@@ -820,7 +822,7 @@ def public(db):
     height = 400
     
     chart = generate_location_map(db, width, height)
-    st.plotly_chart(chart)
+    st.plotly_chart(chart, theme = None)
     
     width = 600
     height = 400
