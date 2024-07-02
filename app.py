@@ -595,7 +595,8 @@ def generate_interest_chart(db, field, width, height):
             'Leitura':'📖', 
             'Viajar':'✈️', 
             'Esportes':'🏐', 
-            'Cozinhar':'🍳'
+            'Cozinhar':'🍳',
+            'Assistir TV ou Cinema':'📺'
         }
     }
     
@@ -686,7 +687,8 @@ def generate_department_interest_hobby_chart(db, width, height):
             'Leitura':'📖', 
             'Viajar':'✈️', 
             'Esportes':'🏐', 
-            'Cozinhar':'🍳'
+            'Cozinhar':'🍳',
+            'Assistir TV ou Cinema':'📺'
         }
     }
     
