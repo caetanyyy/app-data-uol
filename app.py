@@ -4,12 +4,13 @@ import numpy as np
 import pandas as pd
 import streamlit.components.v1 as components
 import plotly.graph_objects as go
+import networkx as nx
 from urllib.request import urlopen
 import json
 import plotly as plt
 import plotly.express as px
 #from sklearn.decomposition import PCA
-#from scipy.spatial.distance import pdist, squareform
+from scipy.spatial.distance import pdist, squareform
 
 def read_data(uploaded_file):
   try:
@@ -806,7 +807,7 @@ def generate_department_interest_hobby_chart(db, width, height):
     
     return chart
 
-def create_similarity_data(db):
+def create_similarity_data(db, quantile = 0.9):
     db_ = db[['Id','Qual seu gênero preferido de música? (Pode marcar mais de um)']]
     db_['Qual seu gênero preferido de música? (Pode marcar mais de um)'] = db_['Qual seu gênero preferido de música? (Pode marcar mais de um)'].str.split(';')
     db_ = db_.explode('Qual seu gênero preferido de música? (Pode marcar mais de um)')
@@ -823,8 +824,6 @@ def create_similarity_data(db):
 
     db_sim = pd.concat([
         pd.get_dummies(db.set_index('Id')[[
-        'Há quanto tempo você faz parte do grupo UOL?',
-        'Qual lanche você prefere?',
         'Cidade',
         'Estado',
         'Qual o seu método de comunicação preferido no trabalho?',
@@ -833,15 +832,14 @@ def create_similarity_data(db):
         db_movie, db_music
                     ], axis = 1).replace({True:1,False:0})
 
-    #pca = PCA(n_components=10)
-    db_pca = db_sim#pd.DataFrame(pca.fit_transform(db_sim))
+    db_pca = db_sim
 
     from scipy.spatial.distance import pdist,squareform
     db_sim = pd.DataFrame(1/(1+squareform(pdist(db_pca))))
     db_sim = db_sim.reset_index().melt(id_vars = 'index')
     db_sim = db_sim[db_sim['index']!=db_sim['variable']].reset_index(drop = True)
     db_sim = db_sim.rename(columns = {'index':'Id1','variable':'Id2','value' : 'similarity'})
-    db_sim = db_sim[db_sim['similarity'] > db_sim['similarity'].quantile(0.7)].reset_index(drop = True)
+    db_sim = db_sim[db_sim['similarity'] > db_sim['similarity'].quantile(quantile)].reset_index(drop = True)
 
     db_sim = db_sim.merge(db[['Id','Qual é o seu departamento?']].rename(
         columns = {'Id':'Id1','Qual é o seu departamento?':'Departamento Id1'})
@@ -874,12 +872,12 @@ def generate_bar_chart_similarity_department(db_chart, width, height):
             'Inovação':'💡', 
             'Ingresso.com':'🍿',
             'Host':'📦', 
-            'P&D':'🛍️'
+            'P&D':'🛍️',
+            'Outro':'Outro'
         }
     }
-    
-    db_chart['perc'] = (100*(db_chart['count']/db_chart['count'].sum())).astype(int).astype(str) + '%' + ' ' + db_chart[field]
-    db_chart = db_chart#.head(7)
+
+    db_chart['perc'] = (100*(db_chart['count'].astype(float).fillna(0))).astype(int).astype(str) + '%' + ' ' + db_chart[field]
     sort = list(db_chart[field].values)
     db_chart['emoji'] = db_chart[field].map(field_emoji[field])
 
@@ -893,7 +891,7 @@ def generate_bar_chart_similarity_department(db_chart, width, height):
         y = alt.Y(field).sort(sort).title(None).axis(values = []),
         x = alt.X('count').title(None),
     ).properties(
-        title = 'Similaridade entre membros dos departamentos', width = width, height = height
+        title = '% de membros similares entre cada departamento', width = width, height = height
     )
 
     emoji =  alt.Chart(db_chart).mark_text(
@@ -937,6 +935,67 @@ def generate_bar_chart_similarity_department(db_chart, width, height):
     
     return chart
 
+def generate_network(db_sim, width, height):
+
+    # Carrega os seus dados do dataframe
+    df = db_sim[['Id1','Id2']].rename(columns = {'Id1':'source','Id2':'target'})
+    # Crie um gráfico NetworkX a partir do dataframe
+    G = nx.from_pandas_edgelist(df, 'source', 'target')
+
+    # Crie um layout do gráfico
+    pos = nx.spring_layout(G)
+
+    # Crie as coordenadas dos nós
+    x = [pos[node][0] for node in G.nodes()]
+    y = [pos[node][1] for node in G.nodes()]
+
+    # Crie as coordenadas das arestas
+    edge_x = []
+    edge_y = []
+    for edge in G.edges():
+        x0, y0 = pos[edge[0]]
+        x1, y1 = pos[edge[1]]
+        edge_x.append([x0, x1])
+        edge_y.append([y0, y1])
+
+    # Crie o gráfico Plotly
+    fig = go.Figure()
+
+    # Adicione as arestas
+    for i in range(len(edge_x)):
+        fig.add_trace(go.Scatter(
+            x=edge_x[i],
+            y=edge_y[i],
+            mode='lines',
+            line=dict(color='#FFCE00', width=3),
+            hoverinfo='none'
+        ))
+
+    # Adicione os nós
+    fig.add_trace(go.Scatter(
+        x=x,
+        y=y,
+        mode='markers',
+        marker=dict(size=10, color='#FF8000'),
+        hoverinfo='text',
+        text=list(G.nodes()),
+    ))
+
+    # Configura o layout do gráfico
+    fig.update_layout(
+        title="",
+        xaxis_visible=False,
+        yaxis_visible=False,
+        showlegend=False,
+        margin=dict(b=20, l=5, r=5, t=40),
+        plot_bgcolor='#0FB1A9',
+        width = width,
+        height = height
+    )
+
+    # Mostre o gráfico
+    return fig
+
 def main():
     #db = read_data(uploaded_file)
     db = pd.read_csv('https://raw.githubusercontent.com/caetanyyy/app-data-uol/main/dados_padronizados.csv')
@@ -962,11 +1021,11 @@ def main():
     ).fillna('Outro')
     if db is not None:
       st.subheader("Dados carregados:")
-      st.write(db)
+      st.write(db.head())
       public(db)
       coffe_break(db)
       hobby(db)
-      #similarity(db)
+      similarity(db)
     
 def public(db):
     st.header('Como é o público do evento?')
@@ -1033,7 +1092,7 @@ def public(db):
     components.html(
         chart.to_html(),
         height = height + h_buffer,
-        width = width + w_buffer,
+        width = width + 400,
     )
 
 def coffe_break(db):
@@ -1108,8 +1167,8 @@ def hobby(db):
 
 def similarity(db):
     st.header('Similaridade entre participantes')
-    h_buffer = 100
-    w_buffer = 200
+    h_buffer = 200
+    w_buffer = 300
 
     width = 500
     height = 300
@@ -1118,14 +1177,31 @@ def similarity(db):
     sim_departamento = (
         db_sim[db_sim['Departamento Id1'] == db_sim['Departamento Id2']].groupby('Departamento Id1')['Id1'].nunique(
         )/db['Qual é o seu departamento?'].value_counts()).reset_index().rename(columns = {'index':'Departamento', 0:'count'})
+    
     sim_departamento = sim_departamento.sort_values('count', ascending = False).reset_index(drop = True)
     
     chart = generate_bar_chart_similarity_department(sim_departamento, 400, 600)
+
     components.html(
         chart.to_html(),
         height = height + h_buffer,
         width = width + w_buffer,
     )
+
+    db_sim = create_similarity_data(db, 0.985)
+
+    chart = generate_network(db_sim, 800, 400)
     
+    st.subheader('Rede de membros altamente similares ❤️😉')
+    st.write('Através dos dados que vocês responderam, podemos usar uma IA (algoritmo de recomendação) para decidir quais membros são altamente similares e dão "match" entre sí. 🫰')
+    
+    st.write('(de forma anônima, claro!)')
+
+    components.html(
+        chart.to_html(),
+        height = height + h_buffer,
+        width = width + w_buffer,
+    )
+
 if __name__ == "__main__":
     main()
