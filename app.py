@@ -610,8 +610,8 @@ def generate_interest_chart(db, field, width, height):
     soma = db_chart['count'].sum()
     db_chart['perc'] = (
         100*db_chart['count']/soma).astype(int).astype(str) + '% ' + db_chart[field]
-    db_chart['count'] = (db_chart['count']).round().astype(int)
-    db_chart['contagem'] = (db_chart['count']).round().astype(int)
+    db_chart['count'] = (db_chart['count']/10).round().astype(int)
+    db_chart['contagem'] = (10*db_chart['count']).round().astype(int)
 
     db_genero = pd.DataFrame()
     for i, r in db_chart.iterrows():
@@ -622,7 +622,7 @@ def generate_interest_chart(db, field, width, height):
         db_genero_aux['emoji'] = db_genero_aux[field].map(field_emoji[field])
         db_genero = pd.concat([db_genero,db_genero_aux]).reset_index(drop = True)
 
-    db_genero['contagem'] = db_genero['contagem'].astype(int)
+    db_genero['contagem'] = 10*db_genero['contagem'].astype(int)
 
     
     emoji = alt.Chart(db_genero).mark_text(
