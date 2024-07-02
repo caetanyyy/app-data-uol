@@ -4,8 +4,10 @@ import numpy as np
 import pandas as pd
 import streamlit.components.v1 as components
 import plotly.graph_objects as go
-from plotly.offline import plot
-
+from urllib.request import urlopen
+import json
+import plotly as plt
+import plotly.express as px
 
 def read_data(uploaded_file):
   try:
@@ -14,6 +16,41 @@ def read_data(uploaded_file):
       st.write('Arquivo fora do formato padrão de csv.')
   db.columns = [str(i) for i in list(db.columns)]
   return db
+
+def generate_location_map(db, width, height):
+    with urlopen('https://raw.githubusercontent.com/codeforamerica/click_that_hood/master/public/data/brazil-states.geojson') as response:
+        Brazil = json.load(response) # Javascrip object notation 
+
+    state_id_map = {}
+    for feature in Brazil ['features']:
+        feature['id'] = feature['properties']['name']
+        state_id_map[feature['properties']['sigla']] = feature['id']
+    
+    db_count = db[['Estado','Longitude','Latitude']].value_counts().reset_index()
+    
+    fig = px.choropleth_mapbox(
+        db_count,
+        locations = 'Estado', #define the limits on the map/geography
+        geojson = Brazil, #shape information
+        color = 'count', #defining the color of the scale through the database
+        hover_name = 'Estado', #the information in the box
+        hover_data =["count","Estado","Longitude","Latitude"],
+        title = "Produtivida da soja (Toneladas)", #title of the map
+        mapbox_style = "carto-positron", #defining a new map style 
+        center={"lat":-14, "lon": -55},#define the limits that will be plotted
+        zoom = 3, #map view size
+        opacity = 0.3, #opacity of the map color, to appear the background,
+        color_continuous_midpoint=int(db_count['count'].max()/2),
+        range_color=(0, db_count['count'].max())
+    )
+
+    fig.update_layout(
+            width = width,
+            height = height,
+            margin={"r":0,"t":0,"l":0,"b":0}
+        )
+
+    return fig
 
 def generate_bar_chart_2(db, field, width, height):
     field_emoji = {
@@ -769,16 +806,21 @@ def main():
       public(db)
       coffe_break(db)
       hobby(db)
-
     
 def public(db):
     st.header('Como é o público do evento?')
     h_buffer = 100
     w_buffer = 200
 
+    width = 800
+    height = 400
+    
+    chart = generate_location_map(db, width, height)
+    st.plotly_chart(chart)
+    
     width = 600
     height = 900
-    
+
     field = 'Qual é o seu departamento?'
     chart = generate_bar_chart_2(db, field, width, height)
     components.html(
