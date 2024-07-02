@@ -590,7 +590,7 @@ def generate_interest_chart(db, field, width, height):
             'Romance':'💕',
             'Animação':'🎨'
         },
-        'Qual o seu hobby preferido?':{
+        'Qual hobby você prefere?':{
             'Jogos':'🎮', 
             'Leitura':'📖', 
             'Viajar':'✈️', 
@@ -604,20 +604,21 @@ def generate_interest_chart(db, field, width, height):
     soma = db_chart['count'].sum()
     db_chart['perc'] = (
         100*db_chart['count']/soma).astype(int).astype(str) + '% ' + db_chart[field]
-    db_chart['count'] = (db_chart['count']/10).round().astype(int)
-    db_chart['contagem'] = (10*db_chart['count']).round().astype(int)
+    db_chart['count'] = (db_chart['count']).round().astype(int)
+    db_chart['contagem'] = (db_chart['count']).round().astype(int)
 
     db_genero = pd.DataFrame()
     for i, r in db_chart.iterrows():
         mul = pd.MultiIndex.from_product([
             [r[field]], 
-            np.arange(1,r['count'] + 1)])
+            np.arange(0,r['count'] + 1)])
         db_genero_aux = pd.DataFrame(index = mul).reset_index().rename(columns = {'level_0':field,'level_1':'contagem'})
         db_genero_aux['emoji'] = db_genero_aux[field].map(field_emoji[field])
         db_genero = pd.concat([db_genero,db_genero_aux]).reset_index(drop = True)
 
-    db_genero['contagem'] = 10*db_genero['contagem'].astype(int)
+    db_genero['contagem'] = db_genero['contagem'].astype(int)
 
+    
     emoji = alt.Chart(db_genero).mark_text(
         size = 30
     ).encode(
@@ -680,7 +681,7 @@ def generate_department_interest_hobby_chart(db, width, height):
             'Romance':'💕',
             'Animação':'🎨'
         },
-        'Qual o seu hobby preferido?':{
+        'Qual hobby você prefere?':{
             'Jogos':'🎮', 
             'Leitura':'📖', 
             'Viajar':'✈️', 
@@ -689,8 +690,8 @@ def generate_department_interest_hobby_chart(db, width, height):
         }
     }
     
-    field = 'Qual o seu hobby preferido?'
-
+    # Hobby
+    field = 'Qual hobby você prefere?'
     
     db_chart = db[
         ['Qual é o seu departamento?',field]
@@ -714,6 +715,7 @@ def generate_department_interest_hobby_chart(db, width, height):
 
     db_chart_0 = db_chart[['Qual é o seu departamento?',field,'emoji']].assign(x_pos = 0).rename(columns = {field:'Texto'})
     
+    # Musica
     field = 'Qual seu gênero preferido de música? (Pode marcar mais de um)'
     
     db_chart = db[
@@ -738,6 +740,7 @@ def generate_department_interest_hobby_chart(db, width, height):
 
     db_chart_1 = db_chart[['Qual é o seu departamento?',field,'emoji']].assign(x_pos = 1).rename(columns = {field:'Texto'})
     
+    # Filme
     field = 'Qual seu gênero de filme preferido? (Pode marcar mais de um)'
 
     db_chart = db[
@@ -906,7 +909,8 @@ def hobby(db):
 
     width = 300
     height = 300
-    field = 'Qual o seu hobby preferido?'
+    
+    field = 'Qual hobby você prefere?'
     chart = generate_interest_chart(db, field, width, height)
     components.html(
         chart.to_html(),
