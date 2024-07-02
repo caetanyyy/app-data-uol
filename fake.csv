@@ -1,0 +1,301 @@
+Id,Qual é o seu departamento?,Há quanto tempo você faz parte do grupo UOL?,Qual lanche você prefere?,Qual bebida você prefere?,Em que cidade você mora?,Qual o seu método de comunicação preferido no trabalho?,Qual o seu hobby preferido?,Qual seu gênero preferido de música? (Pode marcar mais de um),Qual seu turno de preferência para reuniões de trabalho?,Qual seu gênero de filme preferido? (Pode marcar mais de um),"Se você pudesse viajar para qualquer lugar, para onde iria?"
+0,Jurídico,4-6 anos,Fruta,Chá,Porto Alegre,Telefone,Leitura,Funk,Começo da tarde,Romance,Europa
+1,Data & Analytics,<1 ano,Bolo,Suco de Frutas,BH,Chat,Cozinhar,Rock;Sertanejo,Começo da tarde,Comédia,Amazonas
+2,Atendimento,<1 ano,Bolo,Chocolate quente,São Paulo,E-mail,Esportes,Jazz;MPB,Começo da tarde,Documentário;Romance;Ficção Científica,China
+3,Inovação,4-6 anos,Bolo,Suco de Frutas,POA,Telefone,Viajar,Clássica,Começo da tarde,Drama;Ficção Científica,EUA
+4,Ingresso.com,7-10 anos,Pão de Queijo,Leite,SP,Reuniões,Cozinhar,Sertanejo,Final da tarde,Drama,Tramandaí
+5,Publicidade,<1 ano,Salada de frutas,Café,POA,Reuniões,Esportes,Pop,Começo da tarde,Terror;Animação,Europa
+6,Atendimento,1-3 anos,Salada de frutas,Água,BH,Chat,Viajar,Rock,Manhã,Documentário,Amsterdam
+7,Parcerias,4-6 anos,Pão de Queijo,Leite,Porto Alegre - RS,E-mail,Viajar,Clássica,Começo da tarde,Drama,Amazonas
+8,Parcerias,7-10 anos,Sanduíche,Água,BH,E-mail,Esportes,Jazz;MPB,Manhã,Comédia;Ficção Científica,Itália
+9,Publicidade,4-6 anos,Bolo,Chocolate quente,SP,Reuniões,Cozinhar,Sertanejo,Começo da tarde,Ficção Científica,Tramandaí
+10,Segurança,1-3 anos,Bolo,Água,RJ,Chat,Cozinhar,Jazz,Final da tarde,Terror,Chile
+11,Marketing,4-6 anos,Pão de Queijo,Café,Porto Alegre,Chat,Leitura,Sertanejo,Final da tarde,Animação,Toyko
+12,Ingresso.com,<1 ano,Salada de frutas,Suco de Frutas,BH,E-mail,Esportes,Clássica,Começo da tarde,Documentário;Drama,EUA
+13,Produtos Digitais,7-10 anos,Sanduíche,Leite,Rio de Janeiro,Reuniões,Leitura,MPB;Sertanejo,Manhã,Ficção Científica,Tramandaí
+14,Parcerias,4-6 anos,Sanduíche,Chocolate quente,Porto Alegre - RS,E-mail,Viajar,Pop,Manhã,Ficção Científica;Comédia,EUA
+15,Host,1-3 anos,Salada de frutas,Café,RJ,Chat,Jogos,Pop;MPB;Rock,Final da tarde,Terror,EUA
+16,Financeiro,1-3 anos,Salada de frutas,Café,RJ,Reuniões,Viajar,Sertanejo,Manhã,Ação,Chile
+17,RH,1-3 anos,Fruta,Chocolate quente,Porto Alegre - RS,E-mail,Leitura,MPB,Começo da tarde,Animação,EUA
+18,RH,1-3 anos,Pão de Queijo,Água,Rio de Janeiro,Reuniões,Leitura,Funk,Começo da tarde,Drama,Toyko
+19,Inovação,4-6 anos,Bolo,Café,POA,Chat,Cozinhar,Rap,Começo da tarde,Terror,Bariloche
+20,Parcerias,7-10 anos,Bolo,Chá,Belo Horizonte,Reuniões,Esportes,MPB,Final da tarde,Comédia,EUA
+21,RH,7-10 anos,Pão de Queijo,Café,Rio de Janeiro,E-mail,Cozinhar,Clássica,Começo da tarde,Ficção Científica;Drama,USA
+22,P&D,4-6 anos,Salada de frutas,Café,São Paulo,Reuniões,Cozinhar,Jazz,Manhã,Terror,Tramandaí
+23,P&D,4-6 anos,Salada de frutas,Café,RJ,Reuniões,Cozinhar,Sertanejo;Rock;Rap;MPB;Eletrônica,Começo da tarde,Ficção Científica;Documentário,Tramandaí
+24,Publicidade,1-3 anos,Pão de Queijo,Suco de Frutas,Rio de Janeiro,E-mail,Esportes,Jazz,Começo da tarde,Animação,Chile
+25,P&D,1-3 anos,Fruta,Café,RJ,Telefone,Cozinhar,Rap,Começo da tarde,Ação,China
+26,Produtos Digitais,4-6 anos,Pão de Queijo,Chocolate quente,SP,Reuniões,Viajar,Rock;Pop,Começo da tarde,Animação,Europa
+27,Ingresso.com,<1 ano,Bolo,Chocolate quente,POA,Chat,Viajar,Funk;Rap,Começo da tarde,Documentário,EUA
+28,Marketing,1-3 anos,Pão de Queijo,Suco de Frutas,BH,Chat,Jogos,Eletrônica,Final da tarde,Ação,Amsterdam
+29,Jurídico,<1 ano,Fruta,Água,SP,E-mail,Viajar,MPB,Final da tarde,Terror;Romance;Ficção Científica,China
+30,Ingresso.com,1-3 anos,Salada de frutas,Leite,POA,Chat,Viajar,Sertanejo,Começo da tarde,Terror,Europa
+31,Atendimento,4-6 anos,Pão de Queijo,Suco de Frutas,RJ,Chat,Leitura,Jazz,Começo da tarde,Documentário,Chile
+32,P&D,4-6 anos,Pão de Queijo,Chocolate quente,RJ,Reuniões,Cozinhar,Rock,Final da tarde,Documentário,Madrid
+33,Ingresso.com,1-3 anos,Bolo,Água,Belo Horizonte,Chat,Cozinhar,Rap;Funk,Começo da tarde,Ficção Científica,Toyko
+34,Jurídico,10+ anos,Pão de Queijo,Café,Porto Alegre,Chat,Esportes,Funk,Começo da tarde,Documentário;Romance,Bariloche
+35,RH,10+ anos,Sanduíche,Chá,RJ,Chat,Cozinhar,Funk;Rock,Manhã,Romance,Bariloche
+36,Operações,4-6 anos,Sanduíche,Leite,Porto Alegre,Chat,Cozinhar,Rock,Final da tarde,Terror;Comédia;Animação,China
+37,Ingresso.com,4-6 anos,Pão de Queijo,Chá,Rio de Janeiro,Reuniões,Viajar,MPB,Começo da tarde,Terror,Bariloche
+38,Inovação,4-6 anos,Sanduíche,Suco de Frutas,RJ,Chat,Viajar,Funk,Começo da tarde,Romance,Itália
+39,Ingresso.com,4-6 anos,Salada de frutas,Leite,Porto Alegre - RS,Reuniões,Esportes,Rap,Final da tarde,Documentário,China
+40,Produtos Digitais,<1 ano,Salada de frutas,Água,POA,Chat,Cozinhar,Funk,Começo da tarde,Drama;Comédia,Itália
+41,Publicidade,10+ anos,Salada de frutas,Chá,Porto Alegre - RS,Chat,Viajar,Sertanejo,Manhã,Animação,Itália
+42,Operações,7-10 anos,Pão de Queijo,Café,Porto Alegre - RS,Chat,Esportes,Sertanejo,Manhã,Comédia;Romance,Tramandaí
+43,Host,4-6 anos,Pão de Queijo,Chá,RJ,Reuniões,Esportes,Rap,Manhã,Animação,Tramandaí
+44,Host,<1 ano,Fruta,Suco de Frutas,Rio de Janeiro,E-mail,Jogos,Sertanejo,Final da tarde,Terror,Madrid
+45,Ingresso.com,4-6 anos,Pão de Queijo,Café,BH,Chat,Jogos,Funk,Começo da tarde,Comédia,Madrid
+46,Data & Analytics,1-3 anos,Bolo,Chocolate quente,Porto Alegre - RS,Reuniões,Esportes,Jazz,Começo da tarde,Romance,Toyko
+47,Jurídico,7-10 anos,Bolo,Suco de Frutas,RJ,Chat,Esportes,Sertanejo,Final da tarde,Ficção Científica,Tramandaí
+48,Atendimento,1-3 anos,Pão de Queijo,Chá,BH,E-mail,Leitura,Jazz;Funk;Rock,Manhã,Drama,EUA
+49,Jurídico,<1 ano,Sanduíche,Chocolate quente,Porto Alegre,Chat,Viajar,Rap;Jazz;Pop,Começo da tarde,Ficção Científica,Itália
+50,Publicidade,4-6 anos,Pão de Queijo,Suco de Frutas,BH,Chat,Cozinhar,Rap,Manhã,Terror,Europa
+51,Operações,4-6 anos,Pão de Queijo,Leite,Rio de Janeiro,Chat,Cozinhar,Jazz,Começo da tarde,Animação,Toyko
+52,Atendimento,4-6 anos,Bolo,Chocolate quente,Belo Horizonte,Chat,Esportes,Funk,Final da tarde,Ficção Científica,Toyko
+53,Produtos Digitais,7-10 anos,Pão de Queijo,Água,Belo Horizonte,Telefone,Viajar,MPB,Começo da tarde,Ação,China
+54,RH,4-6 anos,Sanduíche,Suco de Frutas,POA,Chat,Cozinhar,Funk,Começo da tarde,Drama,Amsterdam
+55,Jurídico,10+ anos,Salada de frutas,Leite,Belo Horizonte,Reuniões,Esportes,Eletrônica,Começo da tarde,Romance,Madrid
+56,Segurança,1-3 anos,Pão de Queijo,Suco de Frutas,BH,Telefone,Leitura,Eletrônica,Final da tarde,Comédia,Chile
+57,Conteúdo,1-3 anos,Sanduíche,Café,BH,Chat,Viajar,MPB,Final da tarde,Ação;Documentário;Animação,USA
+58,P&D,<1 ano,Pão de Queijo,Suco de Frutas,Rio de Janeiro,Reuniões,Viajar,MPB;Jazz,Começo da tarde,Comédia,Itália
+59,Publicidade,4-6 anos,Pão de Queijo,Café,POA,Reuniões,Leitura,Clássica,Começo da tarde,Comédia,China
+60,Publicidade,4-6 anos,Pão de Queijo,Chá,Rio de Janeiro,E-mail,Esportes,Rap,Manhã,Comédia,Amazonas
+61,Parcerias,7-10 anos,Pão de Queijo,Suco de Frutas,RJ,E-mail,Cozinhar,MPB,Manhã,Drama,EUA
+62,Host,7-10 anos,Sanduíche,Suco de Frutas,Porto Alegre - RS,E-mail,Leitura,Pop,Final da tarde,Ficção Científica,EUA
+63,RH,1-3 anos,Fruta,Suco de Frutas,São Paulo,E-mail,Viajar,Rock,Começo da tarde,Ação,USA
+64,Produtos Digitais,4-6 anos,Pão de Queijo,Suco de Frutas,BH,E-mail,Cozinhar,Pop,Começo da tarde,Romance,Madrid
+65,Conteúdo,1-3 anos,Salada de frutas,Leite,Porto Alegre - RS,Reuniões,Leitura,Clássica,Final da tarde,Animação,USA
+66,Marketing,1-3 anos,Bolo,Café,RJ,E-mail,Cozinhar,Rock;Pop;Eletrônica,Começo da tarde,Comédia,USA
+67,Host,4-6 anos,Fruta,Café,Porto Alegre - RS,Telefone,Esportes,Jazz,Manhã,Ficção Científica,Europa
+68,Parcerias,7-10 anos,Salada de frutas,Chá,RJ,Chat,Leitura,Pop,Começo da tarde,Documentário;Romance,Itália
+69,P&D,1-3 anos,Pão de Queijo,Café,Belo Horizonte,Reuniões,Leitura,MPB,Manhã,Ficção Científica,USA
+70,Conteúdo,<1 ano,Salada de frutas,Suco de Frutas,RJ,E-mail,Cozinhar,Pop,Começo da tarde,Terror,Toyko
+71,Atendimento,1-3 anos,Salada de frutas,Café,Rio de Janeiro,Reuniões,Esportes,Sertanejo,Começo da tarde,Animação;Drama,Amsterdam
+72,Marketing,<1 ano,Salada de frutas,Suco de Frutas,POA,E-mail,Leitura,MPB,Final da tarde,Romance,Amsterdam
+73,P&D,4-6 anos,Pão de Queijo,Café,Belo Horizonte,Reuniões,Viajar,Jazz,Começo da tarde,Documentário;Animação,Toyko
+74,Marketing,4-6 anos,Pão de Queijo,Chocolate quente,BH,Chat,Jogos,Clássica;Funk;Eletrônica,Começo da tarde,Documentário,Itália
+75,Inovação,<1 ano,Salada de frutas,Água,RJ,E-mail,Leitura,Jazz,Final da tarde,Terror;Ação,EUA
+76,Atendimento,4-6 anos,Sanduíche,Suco de Frutas,Porto Alegre - RS,Chat,Leitura,Funk,Final da tarde,Documentário,Chile
+77,Publicidade,4-6 anos,Bolo,Café,Porto Alegre,Chat,Esportes,Rock,Manhã,Terror;Ação;Romance;Ficção Científica;Comédia,Europa
+78,Atendimento,4-6 anos,Pão de Queijo,Água,POA,Chat,Leitura,MPB,Começo da tarde,Ação;Drama,Tramandaí
+79,Host,4-6 anos,Sanduíche,Chá,SP,E-mail,Viajar,Pop,Começo da tarde,Ação;Documentário,China
+80,Financeiro,4-6 anos,Bolo,Chocolate quente,Belo Horizonte,Chat,Leitura,Rock,Final da tarde,Comédia;Drama,EUA
+81,Atendimento,4-6 anos,Fruta,Chá,Porto Alegre - RS,Telefone,Cozinhar,Sertanejo,Começo da tarde,Documentário,Madrid
+82,Produtos Digitais,10+ anos,Salada de frutas,Café,Porto Alegre,Chat,Jogos,Jazz,Manhã,Drama;Documentário,Toyko
+83,Produtos Digitais,7-10 anos,Sanduíche,Chá,Belo Horizonte,Chat,Viajar,Sertanejo,Começo da tarde,Ação,Madrid
+84,Jurídico,4-6 anos,Fruta,Suco de Frutas,RJ,E-mail,Viajar,Rock;Jazz,Final da tarde,Comédia,Amazonas
+85,RH,4-6 anos,Salada de frutas,Suco de Frutas,Belo Horizonte,Reuniões,Esportes,Pop,Manhã,Comédia,Tramandaí
+86,Financeiro,7-10 anos,Bolo,Chá,Rio de Janeiro,E-mail,Esportes,MPB,Manhã,Romance;Drama,Chile
+87,Segurança,<1 ano,Pão de Queijo,Suco de Frutas,Porto Alegre - RS,E-mail,Jogos,Eletrônica,Final da tarde,Comédia,Itália
+88,Host,4-6 anos,Sanduíche,Chocolate quente,RJ,Reuniões,Viajar,MPB,Começo da tarde,Animação,Amazonas
+89,Ingresso.com,7-10 anos,Fruta,Café,São Paulo,E-mail,Esportes,Rap,Começo da tarde,Ação,EUA
+90,Marketing,4-6 anos,Pão de Queijo,Suco de Frutas,POA,Reuniões,Viajar,Clássica;Eletrônica,Começo da tarde,Ficção Científica;Terror,China
+91,Ingresso.com,4-6 anos,Pão de Queijo,Café,Belo Horizonte,Chat,Leitura,Sertanejo;Clássica,Começo da tarde,Documentário,Amsterdam
+92,Ingresso.com,1-3 anos,Pão de Queijo,Suco de Frutas,SP,E-mail,Cozinhar,Rock,Manhã,Ficção Científica;Drama,USA
+93,Data & Analytics,<1 ano,Salada de frutas,Suco de Frutas,RJ,E-mail,Esportes,Eletrônica,Final da tarde,Romance,Europa
+94,Parcerias,1-3 anos,Pão de Queijo,Chá,SP,E-mail,Jogos,Funk,Final da tarde,Animação,Toyko
+95,Jurídico,1-3 anos,Fruta,Chá,Porto Alegre,Chat,Cozinhar,Rock;Rap;Sertanejo,Manhã,Terror;Animação,EUA
+96,Data & Analytics,4-6 anos,Salada de frutas,Suco de Frutas,Porto Alegre,Reuniões,Cozinhar,Funk;Sertanejo,Final da tarde,Ficção Científica,Europa
+97,Publicidade,<1 ano,Pão de Queijo,Café,Rio de Janeiro,Reuniões,Esportes,Jazz,Começo da tarde,Comédia;Romance,China
+98,Produtos Digitais,1-3 anos,Fruta,Água,BH,E-mail,Leitura,Sertanejo;Eletrônica,Manhã,Comédia,USA
+99,P&D,1-3 anos,Salada de frutas,Chocolate quente,POA,Reuniões,Leitura,Sertanejo,Começo da tarde,Terror,Toyko
+100,Publicidade,1-3 anos,Sanduíche,Café,Rio de Janeiro,Reuniões,Esportes,MPB,Começo da tarde,Comédia;Terror,Toyko
+101,P&D,4-6 anos,Pão de Queijo,Suco de Frutas,Rio de Janeiro,Chat,Esportes,Funk,Manhã,Animação,USA
+102,Financeiro,<1 ano,Bolo,Café,Porto Alegre,E-mail,Jogos,Clássica,Começo da tarde,Romance,EUA
+103,RH,<1 ano,Bolo,Suco de Frutas,POA,E-mail,Cozinhar,Rap,Começo da tarde,Ação,Itália
+104,Operações,1-3 anos,Pão de Queijo,Suco de Frutas,RJ,Reuniões,Esportes,Clássica;Funk;MPB,Final da tarde,Comédia,Madrid
+105,Financeiro,7-10 anos,Salada de frutas,Suco de Frutas,SP,Reuniões,Viajar,Rock,Começo da tarde,Comédia,Madrid
+106,P&D,7-10 anos,Fruta,Chocolate quente,São Paulo,E-mail,Cozinhar,Jazz,Final da tarde,Animação,Bariloche
+107,Segurança,<1 ano,Bolo,Água,Rio de Janeiro,Chat,Viajar,Rock;Funk;Rap,Manhã,Romance;Animação,Amsterdam
+108,Jurídico,<1 ano,Sanduíche,Suco de Frutas,BH,Reuniões,Viajar,Funk,Final da tarde,Comédia;Drama,China
+109,Marketing,4-6 anos,Salada de frutas,Suco de Frutas,BH,Reuniões,Leitura,Rock,Começo da tarde,Drama,EUA
+110,Parcerias,4-6 anos,Sanduíche,Chocolate quente,BH,E-mail,Leitura,MPB;Jazz;Rap;Eletrônica,Começo da tarde,Ficção Científica,China
+111,Conteúdo,4-6 anos,Fruta,Chocolate quente,Rio de Janeiro,Telefone,Viajar,Eletrônica,Manhã,Terror,Madrid
+112,Publicidade,4-6 anos,Fruta,Suco de Frutas,Porto Alegre - RS,Chat,Esportes,Rock,Começo da tarde,Ficção Científica,USA
+113,Atendimento,<1 ano,Sanduíche,Água,Belo Horizonte,Chat,Leitura,MPB;Funk,Começo da tarde,Ficção Científica,Europa
+114,Operações,<1 ano,Salada de frutas,Suco de Frutas,Porto Alegre - RS,Reuniões,Viajar,Pop,Manhã,Ação,Chile
+115,Atendimento,4-6 anos,Pão de Queijo,Café,POA,Reuniões,Cozinhar,Rock;Rap,Começo da tarde,Ação,Itália
+116,Operações,1-3 anos,Bolo,Leite,POA,Chat,Cozinhar,Eletrônica;Sertanejo,Começo da tarde,Documentário,Chile
+117,Conteúdo,4-6 anos,Salada de frutas,Café,São Paulo,Chat,Esportes,Sertanejo,Começo da tarde,Drama;Documentário,Amazonas
+118,Jurídico,1-3 anos,Salada de frutas,Chocolate quente,BH,Chat,Esportes,Funk,Começo da tarde,Documentário,Amazonas
+119,Financeiro,7-10 anos,Bolo,Água,Rio de Janeiro,Chat,Viajar,Eletrônica;Rock;Rap,Manhã,Ação;Terror,Itália
+120,Inovação,4-6 anos,Fruta,Suco de Frutas,Belo Horizonte,E-mail,Viajar,Funk;Rap,Começo da tarde,Animação,Amazonas
+121,RH,4-6 anos,Fruta,Suco de Frutas,Belo Horizonte,Telefone,Jogos,MPB,Final da tarde,Romance,Europa
+122,Jurídico,7-10 anos,Pão de Queijo,Café,BH,Telefone,Leitura,MPB;Pop;Sertanejo,Final da tarde,Drama,Europa
+123,Jurídico,4-6 anos,Sanduíche,Suco de Frutas,Belo Horizonte,Chat,Jogos,Pop,Começo da tarde,Ficção Científica,China
+124,Parcerias,<1 ano,Salada de frutas,Leite,BH,Chat,Viajar,Sertanejo,Final da tarde,Animação;Ação,Bariloche
+125,Parcerias,1-3 anos,Bolo,Chocolate quente,SP,Telefone,Esportes,Clássica,Começo da tarde,Comédia,EUA
+126,Conteúdo,4-6 anos,Fruta,Leite,Belo Horizonte,Reuniões,Cozinhar,Clássica;MPB,Começo da tarde,Romance,Itália
+127,Marketing,7-10 anos,Sanduíche,Chocolate quente,São Paulo,Chat,Cozinhar,Pop,Começo da tarde,Ficção Científica;Terror,EUA
+128,Data & Analytics,<1 ano,Fruta,Suco de Frutas,RJ,Telefone,Leitura,Funk,Final da tarde,Ação,China
+129,Operações,1-3 anos,Sanduíche,Chocolate quente,BH,E-mail,Jogos,Sertanejo,Manhã,Terror,USA
+130,Financeiro,1-3 anos,Sanduíche,Chocolate quente,POA,Telefone,Esportes,MPB;Jazz;Clássica,Começo da tarde,Drama,Amsterdam
+131,Parcerias,<1 ano,Sanduíche,Água,Porto Alegre,Chat,Cozinhar,Sertanejo,Começo da tarde,Terror;Comédia,Europa
+132,Data & Analytics,1-3 anos,Bolo,Café,BH,E-mail,Esportes,MPB;Jazz,Começo da tarde,Ficção Científica,Bariloche
+133,P&D,4-6 anos,Salada de frutas,Chocolate quente,POA,Chat,Cozinhar,Pop,Final da tarde,Ficção Científica,Toyko
+134,P&D,<1 ano,Fruta,Suco de Frutas,Belo Horizonte,Chat,Viajar,Funk,Começo da tarde,Documentário,Madrid
+135,Ingresso.com,4-6 anos,Sanduíche,Chá,Belo Horizonte,Chat,Leitura,Eletrônica;Sertanejo,Final da tarde,Documentário,Madrid
+136,RH,4-6 anos,Sanduíche,Chocolate quente,São Paulo,Chat,Cozinhar,Funk,Manhã,Ficção Científica,Chile
+137,Data & Analytics,4-6 anos,Fruta,Café,POA,Chat,Leitura,Sertanejo,Começo da tarde,Drama;Ficção Científica,Chile
+138,RH,4-6 anos,Fruta,Chá,Rio de Janeiro,Chat,Leitura,Eletrônica;Jazz,Manhã,Drama,Amsterdam
+139,P&D,<1 ano,Salada de frutas,Chocolate quente,SP,Reuniões,Esportes,Clássica,Começo da tarde,Ficção Científica,Itália
+140,RH,<1 ano,Salada de frutas,Chocolate quente,RJ,E-mail,Cozinhar,Rap;Rock;Funk;Sertanejo;Clássica,Começo da tarde,Documentário,Itália
+141,P&D,4-6 anos,Bolo,Café,Rio de Janeiro,E-mail,Viajar,Rock;Jazz,Começo da tarde,Documentário,Toyko
+142,RH,7-10 anos,Salada de frutas,Chocolate quente,Porto Alegre - RS,E-mail,Cozinhar,Rap,Começo da tarde,Ficção Científica,Amazonas
+143,Jurídico,<1 ano,Sanduíche,Leite,São Paulo,Chat,Cozinhar,Clássica;Sertanejo,Começo da tarde,Terror,Madrid
+144,Jurídico,<1 ano,Sanduíche,Água,SP,Chat,Jogos,Rap,Começo da tarde,Terror,EUA
+145,Financeiro,7-10 anos,Fruta,Chocolate quente,SP,Reuniões,Leitura,MPB,Começo da tarde,Drama,China
+146,Atendimento,7-10 anos,Pão de Queijo,Suco de Frutas,SP,E-mail,Esportes,Jazz,Manhã,Animação,Itália
+147,Parcerias,1-3 anos,Sanduíche,Leite,POA,Telefone,Jogos,Jazz;Eletrônica,Manhã,Ficção Científica;Documentário,Tramandaí
+148,Data & Analytics,4-6 anos,Fruta,Café,Rio de Janeiro,Chat,Esportes,Rock;Pop,Manhã,Comédia,China
+149,Conteúdo,4-6 anos,Fruta,Chocolate quente,Rio de Janeiro,Reuniões,Esportes,Sertanejo,Final da tarde,Documentário,EUA
+150,Data & Analytics,10+ anos,Fruta,Café,RJ,E-mail,Esportes,Rap,Manhã,Drama,Tramandaí
+151,Parcerias,<1 ano,Sanduíche,Chocolate quente,Porto Alegre,Chat,Esportes,Funk;Pop,Começo da tarde,Ficção Científica,Europa
+152,Financeiro,7-10 anos,Bolo,Suco de Frutas,SP,Reuniões,Esportes,Pop,Manhã,Comédia,Chile
+153,Ingresso.com,<1 ano,Sanduíche,Suco de Frutas,POA,Reuniões,Leitura,Jazz,Final da tarde,Ação,China
+154,Host,4-6 anos,Salada de frutas,Suco de Frutas,POA,Reuniões,Cozinhar,Funk;Sertanejo,Final da tarde,Ficção Científica;Comédia;Romance;Documentário;Animação,Chile
+155,Host,1-3 anos,Sanduíche,Água,SP,Chat,Cozinhar,Rock;Rap;Jazz,Manhã,Animação;Ficção Científica,Europa
+156,Marketing,7-10 anos,Sanduíche,Café,SP,E-mail,Cozinhar,Eletrônica;Rock;Jazz,Manhã,Comédia;Ficção Científica;Terror,Itália
+157,Ingresso.com,<1 ano,Pão de Queijo,Chá,SP,Reuniões,Leitura,Rap,Começo da tarde,Ficção Científica,Toyko
+158,Atendimento,<1 ano,Salada de frutas,Suco de Frutas,POA,E-mail,Cozinhar,Clássica,Final da tarde,Romance,Itália
+159,Atendimento,4-6 anos,Fruta,Chocolate quente,Porto Alegre - RS,Chat,Leitura,Funk;Sertanejo,Começo da tarde,Ficção Científica,Madrid
+160,P&D,4-6 anos,Bolo,Suco de Frutas,BH,Telefone,Viajar,Jazz;MPB,Começo da tarde,Documentário;Drama;Animação;Ficção Científica;Ação;Terror,Amsterdam
+161,Jurídico,4-6 anos,Sanduíche,Chocolate quente,Rio de Janeiro,Telefone,Viajar,Sertanejo;Rap;Eletrônica,Final da tarde,Drama;Comédia;Animação,Amazonas
+162,Host,<1 ano,Pão de Queijo,Café,São Paulo,Reuniões,Esportes,Pop,Começo da tarde,Drama,Madrid
+163,Host,10+ anos,Sanduíche,Leite,São Paulo,Reuniões,Leitura,Sertanejo,Manhã,Documentário,Chile
+164,Produtos Digitais,10+ anos,Fruta,Suco de Frutas,POA,Chat,Leitura,Pop;Sertanejo;Rock;Jazz;Clássica,Começo da tarde,Animação,EUA
+165,Operações,1-3 anos,Salada de frutas,Leite,BH,Reuniões,Esportes,Pop,Começo da tarde,Documentário;Comédia,Bariloche
+166,Parcerias,1-3 anos,Pão de Queijo,Leite,Porto Alegre - RS,Telefone,Esportes,Clássica;Funk,Começo da tarde,Terror;Comédia,EUA
+167,Atendimento,4-6 anos,Fruta,Chocolate quente,São Paulo,E-mail,Cozinhar,MPB,Manhã,Ação,USA
+168,Produtos Digitais,<1 ano,Pão de Queijo,Suco de Frutas,BH,Chat,Cozinhar,Rap,Começo da tarde,Animação,China
+169,Publicidade,7-10 anos,Sanduíche,Chocolate quente,Rio de Janeiro,E-mail,Cozinhar,Eletrônica;Rock,Começo da tarde,Romance,Tramandaí
+170,Segurança,4-6 anos,Salada de frutas,Chá,POA,Reuniões,Jogos,Eletrônica;Clássica,Começo da tarde,Ficção Científica,Itália
+171,Financeiro,7-10 anos,Bolo,Suco de Frutas,São Paulo,Reuniões,Cozinhar,MPB,Começo da tarde,Romance,Amsterdam
+172,Publicidade,1-3 anos,Salada de frutas,Chá,Belo Horizonte,E-mail,Cozinhar,Eletrônica,Final da tarde,Drama,Toyko
+173,Atendimento,4-6 anos,Sanduíche,Café,Porto Alegre - RS,Chat,Viajar,MPB,Começo da tarde,Terror,EUA
+174,Data & Analytics,7-10 anos,Sanduíche,Chá,Rio de Janeiro,E-mail,Jogos,Jazz,Final da tarde,Comédia,USA
+175,Jurídico,7-10 anos,Pão de Queijo,Café,Belo Horizonte,E-mail,Jogos,Eletrônica;Clássica,Começo da tarde,Ação,Europa
+176,Marketing,1-3 anos,Salada de frutas,Café,BH,Chat,Leitura,Jazz,Começo da tarde,Comédia;Drama;Ação,USA
+177,Data & Analytics,4-6 anos,Bolo,Suco de Frutas,São Paulo,Chat,Esportes,Eletrônica,Começo da tarde,Ação;Documentário,Itália
+178,Inovação,10+ anos,Salada de frutas,Chocolate quente,RJ,Chat,Cozinhar,Funk,Começo da tarde,Documentário,Itália
+179,Atendimento,<1 ano,Pão de Queijo,Chá,RJ,Chat,Esportes,Sertanejo,Começo da tarde,Ação,Europa
+180,Data & Analytics,1-3 anos,Fruta,Café,BH,Chat,Viajar,MPB;Rap,Começo da tarde,Romance;Terror;Ficção Científica,Europa
+181,RH,4-6 anos,Pão de Queijo,Chá,POA,Reuniões,Cozinhar,Rock,Começo da tarde,Comédia,China
+182,Inovação,<1 ano,Salada de frutas,Leite,São Paulo,Chat,Esportes,Pop,Começo da tarde,Documentário;Terror;Ficção Científica;Drama;Comédia,Amazonas
+183,Inovação,1-3 anos,Fruta,Suco de Frutas,SP,Reuniões,Cozinhar,Jazz,Manhã,Ação,Madrid
+184,Publicidade,<1 ano,Bolo,Café,Porto Alegre - RS,E-mail,Jogos,MPB,Começo da tarde,Comédia,Tramandaí
+185,Marketing,1-3 anos,Fruta,Café,São Paulo,E-mail,Jogos,Sertanejo;Funk,Começo da tarde,Ação,Europa
+186,Publicidade,1-3 anos,Bolo,Suco de Frutas,RJ,E-mail,Cozinhar,Jazz,Começo da tarde,Documentário,Chile
+187,Ingresso.com,10+ anos,Bolo,Suco de Frutas,RJ,E-mail,Esportes,Rap,Final da tarde,Animação;Documentário;Romance;Ficção Científica,Toyko
+188,Segurança,1-3 anos,Fruta,Café,Porto Alegre - RS,E-mail,Viajar,Rock;Eletrônica,Começo da tarde,Documentário,Amazonas
+189,P&D,10+ anos,Salada de frutas,Leite,RJ,Telefone,Esportes,Sertanejo,Manhã,Romance;Terror,Bariloche
+190,Parcerias,7-10 anos,Bolo,Café,SP,E-mail,Leitura,Clássica,Manhã,Terror,EUA
+191,Parcerias,4-6 anos,Fruta,Café,São Paulo,Chat,Jogos,Clássica,Manhã,Terror,USA
+192,Ingresso.com,<1 ano,Pão de Queijo,Café,São Paulo,Chat,Jogos,Sertanejo,Manhã,Romance,Madrid
+193,Operações,<1 ano,Sanduíche,Chá,Rio de Janeiro,Chat,Leitura,Rock,Começo da tarde,Drama,Tramandaí
+194,Inovação,<1 ano,Salada de frutas,Suco de Frutas,SP,Reuniões,Jogos,Funk,Final da tarde,Ficção Científica;Romance,China
+195,Data & Analytics,4-6 anos,Salada de frutas,Suco de Frutas,São Paulo,Reuniões,Esportes,Pop;Eletrônica,Manhã,Terror,USA
+196,Parcerias,4-6 anos,Bolo,Suco de Frutas,Porto Alegre - RS,E-mail,Esportes,Eletrônica,Começo da tarde,Ficção Científica;Comédia,Chile
+197,RH,4-6 anos,Pão de Queijo,Suco de Frutas,RJ,Telefone,Esportes,Rock,Final da tarde,Comédia,Tramandaí
+198,RH,4-6 anos,Sanduíche,Suco de Frutas,Belo Horizonte,Chat,Jogos,Eletrônica;Jazz;Rock,Começo da tarde,Ação,Tramandaí
+199,Operações,<1 ano,Sanduíche,Café,SP,Chat,Viajar,Funk,Final da tarde,Documentário,Amsterdam
+200,Marketing,10+ anos,Bolo,Suco de Frutas,São Paulo,Telefone,Leitura,Funk;Clássica,Começo da tarde,Drama;Ficção Científica;Animação,USA
+201,P&D,4-6 anos,Bolo,Café,BH,E-mail,Leitura,Rock;Rap;Funk,Começo da tarde,Drama,Bariloche
+202,P&D,<1 ano,Fruta,Chocolate quente,BH,Reuniões,Viajar,Clássica;MPB;Eletrônica;Sertanejo,Manhã,Comédia,Europa
+203,Produtos Digitais,4-6 anos,Sanduíche,Café,Belo Horizonte,Chat,Jogos,Pop,Começo da tarde,Terror;Documentário,China
+204,Conteúdo,1-3 anos,Sanduíche,Chocolate quente,Rio de Janeiro,Chat,Viajar,Pop,Começo da tarde,Ficção Científica,China
+205,Parcerias,10+ anos,Salada de frutas,Suco de Frutas,SP,Telefone,Leitura,Clássica,Manhã,Drama;Ficção Científica,Tramandaí
+206,Jurídico,<1 ano,Pão de Queijo,Suco de Frutas,Rio de Janeiro,Chat,Leitura,MPB,Final da tarde,Comédia,Madrid
+207,Financeiro,<1 ano,Sanduíche,Suco de Frutas,São Paulo,Chat,Leitura,Rap,Começo da tarde,Ação,USA
+208,Parcerias,7-10 anos,Fruta,Chá,POA,Reuniões,Esportes,Sertanejo,Final da tarde,Ação;Documentário,USA
+209,P&D,4-6 anos,Pão de Queijo,Suco de Frutas,POA,Chat,Leitura,MPB,Começo da tarde,Terror,Amazonas
+210,Parcerias,1-3 anos,Sanduíche,Café,Porto Alegre,Reuniões,Cozinhar,Sertanejo;Eletrônica;Rap,Começo da tarde,Ficção Científica,China
+211,Host,<1 ano,Pão de Queijo,Café,SP,Chat,Leitura,Pop;Rock,Começo da tarde,Comédia,EUA
+212,Parcerias,10+ anos,Salada de frutas,Café,SP,Chat,Viajar,MPB;Eletrônica;Clássica,Final da tarde,Animação,Madrid
+213,P&D,4-6 anos,Salada de frutas,Chocolate quente,Belo Horizonte,Chat,Leitura,Jazz;MPB,Final da tarde,Ficção Científica,Europa
+214,Marketing,1-3 anos,Salada de frutas,Chocolate quente,São Paulo,E-mail,Viajar,Pop,Manhã,Ficção Científica;Drama,Amazonas
+215,Data & Analytics,10+ anos,Sanduíche,Café,Porto Alegre,E-mail,Jogos,Jazz,Final da tarde,Drama,Itália
+216,Conteúdo,1-3 anos,Sanduíche,Chá,BH,Chat,Viajar,Sertanejo,Começo da tarde,Ação,Amazonas
+217,Data & Analytics,<1 ano,Salada de frutas,Suco de Frutas,Rio de Janeiro,E-mail,Jogos,Clássica,Final da tarde,Documentário;Drama,Bariloche
+218,Host,1-3 anos,Bolo,Leite,Rio de Janeiro,Chat,Esportes,Rap,Começo da tarde,Documentário;Drama,Madrid
+219,Produtos Digitais,4-6 anos,Pão de Queijo,Café,Porto Alegre,Telefone,Jogos,Pop,Começo da tarde,Comédia,EUA
+220,Atendimento,7-10 anos,Bolo,Suco de Frutas,Porto Alegre,Reuniões,Leitura,Funk,Começo da tarde,Comédia,Bariloche
+221,P&D,4-6 anos,Salada de frutas,Café,POA,Chat,Jogos,Clássica,Final da tarde,Drama,Amazonas
+222,Inovação,7-10 anos,Bolo,Suco de Frutas,Belo Horizonte,E-mail,Viajar,Funk,Começo da tarde,Romance;Terror;Ficção Científica,Amsterdam
+223,Marketing,1-3 anos,Salada de frutas,Água,SP,Reuniões,Esportes,MPB,Manhã,Animação,Madrid
+224,P&D,<1 ano,Pão de Queijo,Café,BH,E-mail,Esportes,Sertanejo,Começo da tarde,Animação;Terror,China
+225,Data & Analytics,1-3 anos,Pão de Queijo,Café,Belo Horizonte,Chat,Leitura,Clássica,Começo da tarde,Ação,Itália
+226,Operações,7-10 anos,Sanduíche,Água,Rio de Janeiro,Telefone,Jogos,Funk,Final da tarde,Ação,Amazonas
+227,Operações,<1 ano,Bolo,Café,SP,Chat,Cozinhar,Rock;Jazz;Rap,Começo da tarde,Romance,Chile
+228,RH,<1 ano,Sanduíche,Água,Rio de Janeiro,Telefone,Jogos,Jazz;Eletrônica,Começo da tarde,Drama,Bariloche
+229,Atendimento,10+ anos,Bolo,Chocolate quente,Rio de Janeiro,Chat,Viajar,Rock,Começo da tarde,Documentário,Bariloche
+230,Atendimento,4-6 anos,Salada de frutas,Café,Porto Alegre - RS,Reuniões,Viajar,Jazz,Manhã,Terror;Documentário;Drama;Ação;Comédia;Romance,Madrid
+231,Operações,1-3 anos,Fruta,Suco de Frutas,SP,E-mail,Viajar,Sertanejo;Rap;Clássica,Manhã,Ficção Científica;Terror;Comédia,Amazonas
+232,RH,10+ anos,Pão de Queijo,Chocolate quente,POA,Reuniões,Viajar,Sertanejo;Clássica,Começo da tarde,Ação;Drama;Terror,Itália
+233,Financeiro,1-3 anos,Pão de Queijo,Café,RJ,E-mail,Esportes,MPB;Sertanejo,Final da tarde,Terror;Comédia,Toyko
+234,Conteúdo,1-3 anos,Sanduíche,Leite,Porto Alegre,E-mail,Viajar,Pop,Começo da tarde,Terror;Drama,Madrid
+235,Publicidade,<1 ano,Sanduíche,Café,BH,E-mail,Viajar,Clássica,Começo da tarde,Animação;Documentário,Madrid
+236,Marketing,7-10 anos,Bolo,Café,Porto Alegre,Chat,Leitura,Funk,Final da tarde,Romance,Tramandaí
+237,Produtos Digitais,<1 ano,Bolo,Suco de Frutas,BH,E-mail,Leitura,MPB;Rock,Final da tarde,Drama;Ação,Europa
+238,Parcerias,4-6 anos,Pão de Queijo,Chocolate quente,BH,Chat,Esportes,Sertanejo,Manhã,Drama,China
+239,Operações,7-10 anos,Bolo,Chocolate quente,Porto Alegre - RS,E-mail,Cozinhar,Pop,Começo da tarde,Terror,Europa
+240,Jurídico,<1 ano,Pão de Queijo,Suco de Frutas,Belo Horizonte,E-mail,Jogos,MPB,Começo da tarde,Romance,Amazonas
+241,Financeiro,7-10 anos,Fruta,Chocolate quente,RJ,E-mail,Jogos,Clássica,Começo da tarde,Terror,Chile
+242,Ingresso.com,1-3 anos,Sanduíche,Café,BH,Reuniões,Leitura,Rock,Manhã,Drama,China
+243,Segurança,<1 ano,Bolo,Café,POA,Chat,Leitura,MPB,Começo da tarde,Romance,Itália
+244,RH,<1 ano,Fruta,Suco de Frutas,Belo Horizonte,Chat,Viajar,Jazz;Pop;Sertanejo,Começo da tarde,Drama,Chile
+245,Jurídico,1-3 anos,Bolo,Leite,Porto Alegre - RS,E-mail,Leitura,MPB;Rock,Começo da tarde,Romance,Itália
+246,Data & Analytics,1-3 anos,Bolo,Café,Porto Alegre,Reuniões,Jogos,Rock,Começo da tarde,Drama,Europa
+247,Financeiro,4-6 anos,Salada de frutas,Chocolate quente,Belo Horizonte,Chat,Jogos,Pop,Começo da tarde,Ação,Amsterdam
+248,Publicidade,<1 ano,Fruta,Suco de Frutas,RJ,Telefone,Viajar,Clássica;Funk;Rap,Começo da tarde,Terror,USA
+249,Produtos Digitais,7-10 anos,Bolo,Suco de Frutas,POA,Chat,Esportes,Eletrônica,Final da tarde,Ficção Científica,Amsterdam
+250,Inovação,4-6 anos,Bolo,Suco de Frutas,Porto Alegre - RS,Reuniões,Jogos,Rap,Começo da tarde,Drama;Animação,Tramandaí
+251,RH,4-6 anos,Bolo,Chá,São Paulo,Chat,Leitura,Jazz,Manhã,Ação;Romance;Ficção Científica;Drama,Bariloche
+252,Inovação,10+ anos,Sanduíche,Suco de Frutas,POA,Telefone,Leitura,Rap,Manhã,Documentário;Terror,EUA
+253,RH,7-10 anos,Pão de Queijo,Água,Rio de Janeiro,Reuniões,Leitura,MPB,Final da tarde,Ficção Científica,Madrid
+254,RH,4-6 anos,Salada de frutas,Chocolate quente,SP,Reuniões,Viajar,Clássica;Eletrônica,Começo da tarde,Romance,USA
+255,Atendimento,<1 ano,Fruta,Chá,POA,Chat,Viajar,Rap,Começo da tarde,Ação;Comédia;Terror;Animação,Toyko
+256,Host,7-10 anos,Pão de Queijo,Leite,SP,Chat,Jogos,Rock,Começo da tarde,Terror;Documentário,EUA
+257,Inovação,1-3 anos,Pão de Queijo,Café,Porto Alegre - RS,Reuniões,Cozinhar,Jazz,Começo da tarde,Documentário,Chile
+258,Jurídico,1-3 anos,Bolo,Chá,POA,Reuniões,Cozinhar,Sertanejo,Começo da tarde,Romance;Documentário;Animação,USA
+259,Marketing,7-10 anos,Fruta,Chocolate quente,Porto Alegre - RS,Reuniões,Jogos,Clássica;MPB;Rap;Rock,Começo da tarde,Comédia,Bariloche
+260,Marketing,<1 ano,Sanduíche,Chocolate quente,Porto Alegre - RS,Reuniões,Viajar,Eletrônica,Começo da tarde,Documentário,Tramandaí
+261,Data & Analytics,4-6 anos,Sanduíche,Chocolate quente,SP,Reuniões,Jogos,Rock,Final da tarde,Terror;Romance;Ação;Drama,Amsterdam
+262,Inovação,<1 ano,Bolo,Chá,BH,Reuniões,Leitura,Funk;Clássica;Rap,Começo da tarde,Romance,Amazonas
+263,Conteúdo,<1 ano,Pão de Queijo,Suco de Frutas,Porto Alegre - RS,Chat,Jogos,Clássica,Começo da tarde,Terror;Romance,Chile
+264,Host,<1 ano,Salada de frutas,Chá,Rio de Janeiro,Reuniões,Viajar,MPB,Começo da tarde,Romance,EUA
+265,Marketing,1-3 anos,Salada de frutas,Café,SP,Reuniões,Leitura,Sertanejo;Pop,Começo da tarde,Romance,Amsterdam
+266,Financeiro,10+ anos,Sanduíche,Café,RJ,Chat,Cozinhar,Pop;Clássica,Começo da tarde,Drama,Tramandaí
+267,Produtos Digitais,<1 ano,Pão de Queijo,Chá,Rio de Janeiro,Chat,Cozinhar,Eletrônica,Começo da tarde,Animação,Toyko
+268,Jurídico,<1 ano,Salada de frutas,Suco de Frutas,Rio de Janeiro,Telefone,Leitura,Funk,Manhã,Ação,Toyko
+269,Ingresso.com,7-10 anos,Fruta,Suco de Frutas,POA,Telefone,Esportes,Eletrônica,Manhã,Comédia,Itália
+270,Data & Analytics,4-6 anos,Salada de frutas,Água,POA,Chat,Viajar,Eletrônica,Final da tarde,Comédia,USA
+271,Publicidade,4-6 anos,Fruta,Suco de Frutas,Porto Alegre,Reuniões,Cozinhar,Pop;Clássica,Final da tarde,Comédia,China
+272,Jurídico,4-6 anos,Pão de Queijo,Chocolate quente,POA,Reuniões,Cozinhar,Rock,Começo da tarde,Romance,Amsterdam
+273,Publicidade,4-6 anos,Fruta,Suco de Frutas,São Paulo,Chat,Jogos,Funk;Rock,Começo da tarde,Ficção Científica,Europa
+274,Parcerias,7-10 anos,Fruta,Suco de Frutas,BH,Telefone,Esportes,MPB,Começo da tarde,Documentário,USA
+275,Host,<1 ano,Pão de Queijo,Café,Belo Horizonte,Chat,Esportes,Rock,Final da tarde,Ação,Madrid
+276,Segurança,1-3 anos,Fruta,Leite,BH,Chat,Viajar,Jazz,Começo da tarde,Comédia,USA
+277,Financeiro,7-10 anos,Sanduíche,Chocolate quente,RJ,Reuniões,Cozinhar,Funk,Manhã,Ação;Romance,Madrid
+278,Produtos Digitais,4-6 anos,Fruta,Chocolate quente,Rio de Janeiro,Telefone,Leitura,Rap,Manhã,Comédia;Ficção Científica,EUA
+279,P&D,4-6 anos,Sanduíche,Leite,RJ,Chat,Leitura,Rock,Começo da tarde,Ação;Drama;Comédia,Madrid
+280,Parcerias,4-6 anos,Pão de Queijo,Suco de Frutas,SP,E-mail,Leitura,Funk,Final da tarde,Ação,Amsterdam
+281,Atendimento,4-6 anos,Sanduíche,Suco de Frutas,Porto Alegre,Telefone,Viajar,Sertanejo;Eletrônica,Manhã,Animação;Romance;Ficção Científica;Terror,Toyko
+282,Jurídico,<1 ano,Salada de frutas,Café,POA,E-mail,Leitura,Funk;Clássica,Manhã,Documentário;Ação;Terror,Amazonas
+283,RH,4-6 anos,Pão de Queijo,Café,SP,Chat,Leitura,Rap,Manhã,Drama,USA
+284,Data & Analytics,4-6 anos,Bolo,Café,BH,Chat,Esportes,Rock;Jazz,Começo da tarde,Animação,Bariloche
+285,Atendimento,4-6 anos,Bolo,Suco de Frutas,RJ,Chat,Leitura,MPB,Começo da tarde,Ação,Tramandaí
+286,Inovação,4-6 anos,Pão de Queijo,Chocolate quente,POA,Reuniões,Leitura,Sertanejo,Começo da tarde,Documentário,Bariloche
+287,Ingresso.com,4-6 anos,Salada de frutas,Suco de Frutas,Porto Alegre - RS,Telefone,Viajar,Pop;Clássica;Funk,Começo da tarde,Comédia;Ação,Tramandaí
+288,Conteúdo,7-10 anos,Pão de Queijo,Suco de Frutas,Porto Alegre,Reuniões,Viajar,Rap,Final da tarde,Ação,USA
+289,Marketing,7-10 anos,Sanduíche,Chá,Belo Horizonte,Telefone,Viajar,Rap;Clássica;Funk,Começo da tarde,Documentário,Bariloche
+290,P&D,<1 ano,Sanduíche,Chocolate quente,Rio de Janeiro,Telefone,Viajar,Rap,Final da tarde,Documentário,Itália
+291,Inovação,<1 ano,Salada de frutas,Chocolate quente,SP,Chat,Leitura,Clássica;Pop;Eletrônica;Funk,Final da tarde,Ficção Científica;Romance,Amazonas
+292,Segurança,<1 ano,Salada de frutas,Chocolate quente,SP,Chat,Cozinhar,Jazz,Final da tarde,Ação;Documentário;Terror,Itália
+293,Produtos Digitais,4-6 anos,Pão de Queijo,Café,Porto Alegre - RS,Chat,Leitura,Funk,Começo da tarde,Documentário,EUA
+294,Inovação,1-3 anos,Sanduíche,Água,SP,E-mail,Viajar,MPB,Começo da tarde,Ação,Amsterdam
+295,Financeiro,<1 ano,Sanduíche,Café,POA,Chat,Viajar,Funk,Começo da tarde,Drama,Amazonas
+296,Parcerias,4-6 anos,Pão de Queijo,Café,Rio de Janeiro,Telefone,Esportes,Funk,Começo da tarde,Drama;Ação;Animação,Chile
+297,Inovação,<1 ano,Sanduíche,Café,Rio de Janeiro,Chat,Jogos,Clássica,Manhã,Ficção Científica,USA
+298,Inovação,4-6 anos,Sanduíche,Café,São Paulo,Chat,Leitura,Pop,Começo da tarde,Terror,Toyko
+299,Ingresso.com,10+ anos,Salada de frutas,Café,Porto Alegre - RS,Chat,Leitura,MPB,Começo da tarde,Terror;Romance,Bariloche
