@@ -799,7 +799,6 @@ def generate_department_interest_hobby_chart(db, width, height):
     
     return chart
 
-
 def main():
     #db = read_data(uploaded_file)
     db = pd.read_csv('https://raw.githubusercontent.com/caetanyyy/app-data-uol/main/dados_padronizados.csv')
@@ -822,7 +821,7 @@ def public(db):
     st.plotly_chart(chart)
     
     width = 600
-    height = 900
+    height = 400
 
     field = 'Qual é o seu departamento?'
     chart = generate_bar_chart_2(db, field, width, height)
@@ -870,7 +869,7 @@ def public(db):
     )
 
     width = 200
-    height = 900
+    height = 400
     chart = generate_department_working_interest_chart(db, width, height)
     components.html(
         chart.to_html(),
@@ -939,7 +938,7 @@ def hobby(db):
     )
 
     width = 200
-    height = 900
+    height = 400
     
     chart = generate_department_interest_hobby_chart(db, width, height)
     components.html(
