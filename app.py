@@ -833,8 +833,8 @@ def create_similarity_data(db):
         db_movie, db_music
                     ], axis = 1).replace({True:1,False:0})
 
-    pca = PCA(n_components=10)
-    db_pca = pd.DataFrame(pca.fit_transform(db_sim))
+    #pca = PCA(n_components=10)
+    db_pca = db_sim#pd.DataFrame(pca.fit_transform(db_sim))
 
     from scipy.spatial.distance import pdist,squareform
     db_sim = pd.DataFrame(1/(1+squareform(pdist(db_pca))))
@@ -971,7 +971,7 @@ def main():
 def public(db):
     st.header('Como é o público do evento?')
     h_buffer = 100
-    w_buffer = 200
+    w_buffer = 300
 
     width = 800
     height = 400
@@ -979,7 +979,7 @@ def public(db):
     chart = generate_location_map(db, width, height)
     st.plotly_chart(chart, theme = None)
     
-    width = 600
+    width = 500
     height = 900
 
     field = 'Qual é o seu departamento?'
