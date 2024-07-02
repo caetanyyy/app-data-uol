@@ -8,6 +8,8 @@ from urllib.request import urlopen
 import json
 import plotly as plt
 import plotly.express as px
+from sklearn.decomposition import PCA
+from scipy.spatial.distance import pdist, squareform
 
 def read_data(uploaded_file):
   try:
@@ -72,7 +74,8 @@ def generate_bar_chart_2(db, field, width, height):
             'Inovação':'💡', 
             'Ingresso.com':'🍿',
             'Host':'📦', 
-            'P&D':'🛍️'
+            'P&D':'🛍️',
+            'Outro':'Outro'
         }
     }
 
@@ -803,15 +806,167 @@ def generate_department_interest_hobby_chart(db, width, height):
     
     return chart
 
+def create_similarity_data(db):
+    db_ = db[['Id','Qual seu gênero preferido de música? (Pode marcar mais de um)']]
+    db_['Qual seu gênero preferido de música? (Pode marcar mais de um)'] = db_['Qual seu gênero preferido de música? (Pode marcar mais de um)'].str.split(';')
+    db_ = db_.explode('Qual seu gênero preferido de música? (Pode marcar mais de um)')
+    db_['valor'] = True
+    db_music = db_.pivot_table(index = 'Id', columns = 'Qual seu gênero preferido de música? (Pode marcar mais de um)', values = 'valor'
+                              ).fillna(False)
+
+    db_ = db[['Id','Qual seu gênero de filme preferido? (Pode marcar mais de um)']]#
+    db_['Qual seu gênero de filme preferido? (Pode marcar mais de um)'] = db_['Qual seu gênero de filme preferido? (Pode marcar mais de um)'].str.split(';')
+    db_ = db_.explode('Qual seu gênero de filme preferido? (Pode marcar mais de um)')
+    db_['valor'] = True
+    db_movie = db_.pivot_table(index = 'Id', columns = 'Qual seu gênero de filme preferido? (Pode marcar mais de um)', values = 'valor'
+                              ).fillna(False)
+
+    db_sim = pd.concat([
+        pd.get_dummies(db.set_index('Id')[[
+        'Há quanto tempo você faz parte do grupo UOL?',
+        'Qual lanche você prefere?',
+        'Cidade',
+        'Estado',
+        'Qual o seu método de comunicação preferido no trabalho?',
+        'Qual seu turno de preferência para reuniões de trabalho?',
+        ]]), 
+        db_movie, db_music
+                    ], axis = 1).replace({True:1,False:0})
+
+    pca = PCA(n_components=10)
+    db_pca = pd.DataFrame(pca.fit_transform(db_sim))
+
+    from scipy.spatial.distance import pdist,squareform
+    db_sim = pd.DataFrame(1/(1+squareform(pdist(db_pca))))
+    db_sim = db_sim.reset_index().melt(id_vars = 'index')
+    db_sim = db_sim[db_sim['index']!=db_sim['variable']].reset_index(drop = True)
+    db_sim = db_sim.rename(columns = {'index':'Id1','variable':'Id2','value' : 'similarity'})
+    db_sim = db_sim[db_sim['similarity'] > db_sim['similarity'].quantile(0.7)].reset_index(drop = True)
+
+    db_sim = db_sim.merge(db[['Id','Qual é o seu departamento?']].rename(
+        columns = {'Id':'Id1','Qual é o seu departamento?':'Departamento Id1'})
+                         )
+    db_sim = db_sim.merge(
+        db[['Id','Qual é o seu departamento?']].rename(columns = {'Id':'Id2','Qual é o seu departamento?':'Departamento Id2'})
+    )
+
+    db_sim['aux'] = db_sim.apply(lambda x: sorted([x['Id1'], x['Id2']]), axis = 1)
+    db_sim = db_sim.drop_duplicates('aux').drop(columns = 'aux').reset_index(drop = True)
+
+    return db_sim
+
+def generate_bar_chart_similarity_department(db_chart, width, height):
+    field = 'Departamento'
+    field_emoji = {
+        'Departamento':{
+            'Parcerias':'🤝', 
+            'RH':'👥', 
+            'Produtos Digitais':'🌐', 
+            'Financeiro':'💸', 
+            'Jurídico':'⚖️',
+            'Conteúdo':'📝', 
+            'Operações':'⚙️', 
+            'Marketing':'🎯', 
+            'Publicidade':'📢', 
+            'Atendimento':'☎️',
+            'Data & Analytics':'🎲', 
+            'Segurança':'🔐', 
+            'Inovação':'💡', 
+            'Ingresso.com':'🍿',
+            'Host':'📦', 
+            'P&D':'🛍️'
+        }
+    }
+    
+    db_chart['perc'] = (100*(db_chart['count']/db_chart['count'].sum())).astype(int).astype(str) + '%' + ' ' + db_chart[field]
+    db_chart = db_chart#.head(7)
+    sort = list(db_chart[field].values)
+    db_chart['emoji'] = db_chart[field].map(field_emoji[field])
+
+    bar_chart = alt.Chart(db_chart).mark_bar(
+        opacity=1,
+        stroke='black',
+        strokeWidth=3,
+        strokeOpacity=1,
+        color = 'white'
+    ).encode(
+        y = alt.Y(field).sort(sort).title(None).axis(values = []),
+        x = alt.X('count').title(None),
+    ).properties(
+        title = 'Similaridade entre membros dos departamentos', width = width, height = height
+    )
+
+    emoji =  alt.Chart(db_chart).mark_text(
+        size = 30,
+        dx = -10,
+        align = 'right'
+    ).encode(
+        y = alt.Y(field).sort(sort).title(None),
+        x = alt.X('count').axis(
+                values = []
+            ).title('Contagem'),
+        text = 'emoji',
+        tooltip = ['count','emoji',field]
+    )
+
+    percent = alt.Chart(db_chart).mark_text(
+        size = 20, 
+        color = '#3255E2',
+        align = 'left',
+        dx = 5, 
+        stroke = 'black', 
+        strokeOpacity=0.3, 
+        strokeWidth = 0.8
+    ).encode(
+        y = alt.Y(field).sort(sort).title(None),
+        x = alt.X('count').axis(
+                values = []
+            ).title(None),
+        text = 'perc',
+    )
+
+    chart = (
+        bar_chart + emoji + percent
+    ).configure(
+        background='#FF8000'
+    ).configure_view(
+        strokeWidth=0
+    ).configure_axis(
+        domain=False
+    )
+    
+    return chart
+
 def main():
     #db = read_data(uploaded_file)
     db = pd.read_csv('https://raw.githubusercontent.com/caetanyyy/app-data-uol/main/dados_padronizados.csv')
+    db = db.rename(columns = {'ID':'Id'})
+    db['Qual é o seu departamento?' ] = db['Qual é o seu departamento?'].map(
+        {   'Parcerias': 'Parcerias', 
+            'RH':'RH', 
+            'Produtos Digitais':'Produtos Digitais', 
+            'Financeiro':'Financeiro', 
+            'Jurídico':'Jurídico',
+            'Conteúdo':'Conteúdo', 
+            'Operações':'Operações', 
+            'Marketing':'Marketing', 
+            'Publicidade':'Publicidade', 
+            'Atendimento':'Atendimento',
+            'Data & Analytics':'Data & Analytics', 
+            'Segurança':'Segurança', 
+            'Inovação':'Inovação', 
+            'Ingresso.com':'Ingresso.com',
+            'Host':'Host', 
+            'P&D':'P&D'
+        }
+    ).fillna('Outro')
     if db is not None:
       st.subheader("Dados carregados:")
       st.write(db)
       public(db)
       coffe_break(db)
       hobby(db)
+      #similarity(db)
     
 def public(db):
     st.header('Como é o público do evento?')
@@ -825,7 +980,7 @@ def public(db):
     st.plotly_chart(chart, theme = None)
     
     width = 600
-    height = 400
+    height = 900
 
     field = 'Qual é o seu departamento?'
     chart = generate_bar_chart_2(db, field, width, height)
@@ -873,7 +1028,7 @@ def public(db):
     )
 
     width = 200
-    height = 400
+    height = 900
     chart = generate_department_working_interest_chart(db, width, height)
     components.html(
         chart.to_html(),
@@ -942,7 +1097,7 @@ def hobby(db):
     )
 
     width = 200
-    height = 400
+    height = 900
     
     chart = generate_department_interest_hobby_chart(db, width, height)
     components.html(
@@ -951,5 +1106,26 @@ def hobby(db):
         width = width + w_buffer,
     )
 
+def similarity(db):
+    st.header('Similaridade entre participantes')
+    h_buffer = 100
+    w_buffer = 200
+
+    width = 500
+    height = 300
+    db_sim = create_similarity_data(db)
+
+    sim_departamento = (
+        db_sim[db_sim['Departamento Id1'] == db_sim['Departamento Id2']].groupby('Departamento Id1')['Id1'].nunique(
+        )/db['Qual é o seu departamento?'].value_counts()).reset_index().rename(columns = {'index':'Departamento', 0:'count'})
+    sim_departamento = sim_departamento.sort_values('count', ascending = False).reset_index(drop = True)
+    
+    chart = generate_bar_chart_similarity_department(sim_departamento, 400, 600)
+    components.html(
+        chart.to_html(),
+        height = height + h_buffer,
+        width = width + w_buffer,
+    )
+    
 if __name__ == "__main__":
     main()
