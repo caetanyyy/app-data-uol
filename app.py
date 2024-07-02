@@ -8,8 +8,8 @@ from urllib.request import urlopen
 import json
 import plotly as plt
 import plotly.express as px
-from sklearn.decomposition import PCA
-from scipy.spatial.distance import pdist, squareform
+#from sklearn.decomposition import PCA
+#from scipy.spatial.distance import pdist, squareform
 
 def read_data(uploaded_file):
   try:
