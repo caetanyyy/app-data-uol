@@ -798,9 +798,9 @@ def generate_department_interest_hobby_chart(db, width, height):
 
 
 def main():
-    uploaded_file = st.file_uploader("Carregamento do arquivo:")
-    if uploaded_file is not None:
-      db = read_data(uploaded_file)
+    #db = read_data(uploaded_file)
+    db = pd.read_csv('https://raw.githubusercontent.com/caetanyyy/app-data-uol/main/dados_padronizados.csv')
+    if db is not None:
       st.subheader("Dados carregados:")
       st.write(db)
       public(db)
